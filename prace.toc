@@ -1,0 +1,5 @@
+\babel@toc {czech}{}
+\contentsline {chapter}{\numberline {1}Some chaper}{9}% 
+\contentsline {section}{\numberline {1.1}T\IeC {\v r}eba taky ud\IeC {\v e}l\IeC {\'a}m zkratku}{9}% 
+\contentsline {subsection}{\numberline {1.1.1}Some even more specific section maybe with even longer and longer name}{10}% 
+\contentsline {chapter}{\numberline {2}T\IeC {\v r}eba to ale n\IeC {\v e}jak zkr\IeC {\'a}t\IeC {\'\i }m}{13}% 
