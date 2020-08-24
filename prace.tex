@@ -1,9 +1,9 @@
 % ŠABLONA PRO PSANÍ SOČ
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Autor: Jakub Dokulil
+% Autor: Jakub Dokulil (kubadokulil99@gmail.com)
 % Tato šablona byla vytvořena tak, aby pomocí ní mohli v systému LaTeX soutěžící sázet své práce a zároveň odpovídala požadavkům na formátování vyplývajícím z wordové šablony umístěné na webu soc.cz.
 %
-\documentclass[12pt, a4paper,s
+\documentclass[12pt, a4paper,
   %oneside,      %% -- odkomentujte, pokud chcete svou práci mít pouze jednostrannou, mezera pro hřbet pak automaticky bude pouze na levé straně
  twoside,        %% -- pro oboustranné práce, mezera pro hřbet následně střídá strany.
  openright
@@ -14,7 +14,7 @@
 
 \title{Moc důležitý a zajímavý název v češtině} %% -- Název tvé práce
 \author{Dummy Author} %% -- tvé jméno
-\date{2020} %% -- rok, kdy píšeš SOČku
+\date{3020} %% -- rok, kdy píšeš SOČku
 
 \usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=1.5cm]{geometry} %% nastaví okraje, left -- vnitřní okraj, right -- vnější okraj
 
@@ -27,12 +27,14 @@
 
 \usepackage{subcaption} %% balíček pro vkládání podobrázků
 
+\usepackage{hyperref}
+
 \linespread{1.15} %% řádkování
 
 \usepackage[pagestyles]{titlesec} %% balíček pro úpravu stylu kapitol a sekcí
 \titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{\thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}]
 \titleformat{\section}[block]{\scshape\bfseries\Large}{\thesection}{10pt}{\vspace{0pt}}
-\titleformat{\subsection}[block]{\bfseries\large}{\thesection}{10pt}{\vspace{0pt}}
+\titleformat{\subsection}[block]{\bfseries\large}{\thesubsection}{10pt}{\vspace{0pt}}
 
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{1}
@@ -40,10 +42,15 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{1pt}
 
+\usepackage{booktabs}
+
+\usepackage{url}
+
 %% Balíčky co se můžou hodit :) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů, balíček je nutný pokud chcete 
+
 
 \usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, například u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
 
@@ -51,6 +58,31 @@
 \usepackage{amsfonts}   %% pro sazbu matematických symbolů
 \usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
 \usepackage{mathrsfs}
+
+\usepackage{listings} %% balíček pro sazbu zdrojových kódů
+
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstset{language=Python, %% sem napiš jaký programovací jazyk používáš, úplný seznam viz: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+    %basicstyle=\color{red},
+    breaklines=true,%
+    basicstyle=\ttfamily,
+%    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
 
 %% Bordel pro práci - později se smázne :) 
 %%%%%%%%%%%%%%%%%%%
@@ -62,6 +94,7 @@
 \begin{document}
 
 \pagestyle{empty}
+\pagenumbering{Roman}
 
 \begin{titlepage}
     \bfseries{ %%% písmo na stránce je tučně
@@ -116,17 +149,17 @@
     \end{center}  
 }%%%
 {\Large %%%
-    \noindent\textbf{Jméno:} Hubert J. Farnsworth\\
+    \noindent\textbf{Jméno:} Philip J. Fry\\
     \textbf{Škola:} Mars University\\
     \textbf{Kraj:} Galaktický kraj\\
-    \textbf{Konzultant:} Hubert J. Farnsworth\\
+    \textbf{Konzultant:} prof. Hubert J. Farnsworth\\
 } %%%
 
 \noindent Nový New York, 3020
 
 \cleardoublepage
 
-{\Large{\bfseries{Prohlášení}}} %% uprav si koncovky podle toho na jaký rod se cítíš, vypadá to pak lépe :) 
+\noindent{\Large{\bfseries{Prohlášení}}}  %% uprav si koncovky podle toho na jaký rod se cítíš, vypadá to pak lépe :) 
 
 \noindent Prohlašuji, že jsem svou práci SOČ vypracoval/a samostatně a použil/a jsem pouze prameny a literaturu uvedené v seznamu bibliografických záznamů.
 
@@ -140,14 +173,39 @@
 
 \hspace{8cm} Philip J. Fry
 
+\cleardoublepage
+
+\vspace*{0.8\textheight}
+\noindent{\Large{\bfseries{Poděkování}}}
+
+\noindent
+Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné tipy, triky a připomínky, bez kterých by nevznikla tato práce. Dále bych chtěl poděkovat mé rodině a přítelkyni, za to, že mě dostatečně zásobili kávou.
+
+\cleardoublepage
 
 \tableofcontents
 
-\chapter{Some chaper}
-\lipsum[1-2]
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\setcounter{page}{1}
 
-\section[Třeba taky udělám zkratku]{Some more specific section, with a quite very long name}
-\lipsum[1-2]
+\chapter*{Úvod}
+Ahoj,
+a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX pro psaní své práce, jelikož jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku. Tvá práce pak bude vypadat, krásně, elegantně a profesionálně a tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). Zároveň je dobré sledovat komentáře v zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena  a nebo přímo na můj mail \url{kubadokulil99@gmail.com}
+
+Ale teď už hurá na psaní!
+
+\chapter{Tipy k psaní}
+
+Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje psát velmi rozsáhlé text. Jeho autor Donald Knuth ho stvořil, aby mohl vydat jeho učebnici \emph{The Art of Computer Programming} a dodnes se je využíván pro sazbu vysokoškolských skript a učebnic. V této kapitole najdeš ukázky různých funkcí a balíčků \LaTeX u od těch nejzákladnějších až po složitější. Neznamená to nutně, že všechny musíš použít, ale když potřebuješ pomoct, tak je dobré mít oporu. 
+
+Pokud s \LaTeX em úplně zařínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}.
+
+
+\section[Základy]{Základy: Text, obrázky, tabulky a citace}
+Psaní textu v tomto není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Pokud často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~| (tildy).
+
+U obrázků je dobré používat vektorové formáty, pokud to jde. \LaTeX se nejvíc kamarádí s formátem PDF. Do známého PDFka lze z jiných vektorových formátů (ať už SVG či ESP) obrázky přenést snadno pomocí grafických programů, jako je třeba inkscape. \LaTeX si rozhodně poradí i s tradičními formáty PNG a JPG, avšak tyto obrázky mohou zabírat více prostoru a kolikrát
 
 \begin{figure}[h]
     \centering
@@ -156,13 +214,66 @@
     \label{fig:logoSOC}
 \end{figure}
 
+\begin{table}
+    \caption{Tato tabulka slouží jako ukázka toho, jak mohou tabulky vypadat.}
+    \begin{center}
+        \begin{tabular}{lll}
+            \toprule
+            záhlaví& této & tabulky\\
+            \midrule
+            obsah&tabulky& už\\
+            není & oddělený &čarami\\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
+
 \subsection{Some even more specific section maybe with even longer and longer name}
 \lipsum[1-2]
 \begin{equation}
     \oint B \cdot d \vec{s} = \upmu_0 I
 \end{equation}
+
+\lstinputlisting[firstline=3, lastline=7]{code/example.py}
+
 \lipsum[1-3]
 
-\chapter[Třeba to ale nějak zkrátím]{A co když budu mít nějakou fakt moc kurva dlouhou kapitolu -- teda název -- třeba i s rovnicí $E = mc^2$}
+\chapter[Třeba to ale nějak zkrátím]{A co když budu mít nějakou fakt moc dlouhou kapitolu -- teda název -- třeba i s rovnicí $E = mc^2$}
+
+Co dále udělat
+
+\begin{itemize}
+    \item přidat odkaz na ne příliš stručný úvod do systému \LaTeX2e
+    \item odkaz na wikibooks
+    \item tex overflow
+    \item obrázky, vektor - rastr
+    \item 
+\end{itemize}
+
+
+%% literatura
+\begin{thebibliography}{99}
+    \bibitem{sablonaSOC} DOKULIL Jakub. \textit{Šablona pro psaní SOČ v programu \LaTeX} [Online]. Brno, 2020 [cit. 2020-08-24]. Dostupné z: \url{https://github.com/Kubiczek36/SOC_sablona}
+    \bibitem{LaTeXprirucka}OETIKER, Tobias, Hubert PARTL, Irene HYNA, Elisabeth SCHEGL, Michal KOČER a Pavel SÝKORA. \textit{Na příliš stručný úvod do systému LaTeX2e} [online]. 1998 [cit. 2020-08-24]. Dostupné z: \url{https://www.jaroska.cz/elearning/informatika/typografie/lshort2e-cz.pdf}
+    \bibitem{wikibooksLaTeX}\textit{Wikibooks: LaTeX} [online]. San Francisco (CA): Wikimedia Foundation, 2001- [cit. 2020-08-24]. Dostupné z: \url{https://en.wikibooks.org/wiki/LaTeX}
+    \bibitem{Born2019}
+    BORN, Max a Emil WOLF. \textit{Principles of optics: electromagnetic theory of propagation, interference and diffraction of light}. 7th (expanded) edition. Reprinted wirth corrections 2002. 15th printing 2019. Cambridge: Cambridge University Press, 2019. ISBN 978-0-521-64222-4.
+\end{thebibliography}
+
+%% obrázky 
+\listoffigures
+
+%% tabulky
+\listoftables
+
+\appendix %% začínají přílohy
+
+\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{Příloha \thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}] %% nastavení nadpisu
+
+
+\chapter{%Příloha A 
+Spot diagramy a další }
+
+\lstinputlisting{code/example.py}
 
 \end{document}
