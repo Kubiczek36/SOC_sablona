@@ -59,30 +59,66 @@
 \usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
 \usepackage{mathrsfs}
 
+%% makra pro sazbu matematiky
+\newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
+%% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem 
+%% kratší a mohu si tak usnadnit práci
+
 \usepackage{listings} %% balíček pro sazbu zdrojových kódů
 
 \usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
 
-\lstset{language=Python, %% sem napiš jaký programovací jazyk používáš, úplný seznam viz: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\lstset{language=Python, %% sem napiš jaký programovací jazyk používáš,
+% úplný seznam viz: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+% převzato a upraveno z https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
     %basicstyle=\color{red},
     breaklines=true,%
     basicstyle=\ttfamily,
-%    morekeywords={matlab2tikz},
     keywordstyle=\color{blue},%
     morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
     identifierstyle=\color{black},%
     stringstyle=\color{mylilas},
     commentstyle=\color{mygreen},%
-    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    showstringspaces=false,% without this there will be a symbol in the places where there is a space
     numbers=left,%
     numberstyle={\tiny \color{black}},% size of the numbers
     numbersep=9pt, % this defines how far the numbers are from the text
     emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
     %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+    literate=%  definice symbolů s diakritikou
+    {á}{{\'a}}1
+    {č}{{\v{c}}}1
+    {ď}{{\v{d}}}1
+    {é}{{\'e}}1
+    {ě}{{\v{e}}}1
+    {í}{{\'i}}1
+    {ň}{{\v{n}}}1
+    {ó}{{\'o}}1
+    {ř}{{\v{r}}}1
+    {š}{{\v{s}}}1
+    {ť}{{\v{t}}}1
+    {ú}{{\'u}}1
+    {ů}{{\r{u}}}1
+    {ý}{{\'y}}1
+    {ž}{{\v{z}}}1
+    {Á}{{\'A}}1
+    {Č}{{\v{C}}}1
+    {Ď}{{\v{D}}}1
+    {É}{{\'E}}1
+    {Ě}{{\v{E}}}1
+    {Í}{{\'I}}1
+    {Ň}{{\v{N}}}1
+    {Ó}{{\'O}}1
+    {Ř}{{\v{R}}}1
+    {Š}{{\v{S}}}1
+    {Ť}{{\v{T}}}1
+    {Ú}{{\'U}}1
+    {Ů}{{\r{U}}}1
+    {Ý}{{\'Y}}1
+    {Ž}{{\v{Z}}}1
 }
-
 
 %% Bordel pro práci - později se smázne :) 
 %%%%%%%%%%%%%%%%%%%
@@ -183,6 +219,31 @@ Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné 
 
 \cleardoublepage
 
+\noindent{\Large{\bfseries{Abstrakt}}}
+
+\noindent Sem napíšeš svůj abstrakt. \lipsum[1]
+
+\vspace{18pt}
+
+\noindent{\Large{\bfseries{Klíčová slova}}}
+
+\noindent Šablona, \LaTeX, SOČ, \dots 
+
+\vspace{18pt}
+
+\noindent{\Large{\bfseries{Abstract}}}
+
+\noindent Write your abstract here! \lipsum[1]
+
+\vspace{18pt}
+
+\noindent{\Large{\bfseries{Keywords}}}
+
+\noindent Template, \LaTeX, High school proffessional activity, \dots 
+
+
+\cleardoublepage
+
 \tableofcontents
 
 \pagenumbering{arabic}
@@ -191,7 +252,7 @@ Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné 
 
 \chapter*{Úvod}
 Ahoj,
-a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX pro psaní své práce, jelikož jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku. Tvá práce pak bude vypadat, krásně, elegantně a profesionálně a tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). Zároveň je dobré sledovat komentáře v zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena  a nebo přímo na můj mail \url{kubadokulil99@gmail.com}
+a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX pro psaní své práce, jelikož jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku. Tvá práce pak bude vypadat, krásně, elegantně a profesionálně a tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). Zároveň je dobré sledovat komentáře v zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena, a nebo přímo na můj mail \url{kubadokulil99@gmail.com}
 
 Ale teď už hurá na psaní!
 
@@ -199,34 +260,101 @@ Ale teď už hurá na psaní!
 
 Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje psát velmi rozsáhlé text. Jeho autor Donald Knuth ho stvořil, aby mohl vydat jeho učebnici \emph{The Art of Computer Programming} a dodnes se je využíván pro sazbu vysokoškolských skript a učebnic. V této kapitole najdeš ukázky různých funkcí a balíčků \LaTeX u od těch nejzákladnějších až po složitější. Neznamená to nutně, že všechny musíš použít, ale když potřebuješ pomoct, tak je dobré mít oporu. 
 
-Pokud s \LaTeX em úplně zařínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}.
+Pokud s \LaTeX em úplně zařínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}. Pokud narazíš na nějaký problém googlete. Na internetu je spoustu fór, kde pravděpodobně už někdo podobný problém řešil. Asi nejvíce otho najdeš na stránce TeX - LaTeX Stackexchange \cite{stackExchange}.
 
 
 \section[Základy]{Základy: Text, obrázky, tabulky a citace}
-Psaní textu v tomto není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Pokud často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~| (tildy).
+Psaní textu v tomto není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Pokud často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~|~(tildy). Pokud budeš chtít psát uvozovky použij příkaz \texttt{uv}, pomocí něj se ti vytvoří uvozovky podle příslušného jazyka. V česku tedy ve formátu 99 66. Použití příkazu najdeš níže v textu.
 
-U obrázků je dobré používat vektorové formáty, pokud to jde. \LaTeX se nejvíc kamarádí s formátem PDF. Do známého PDFka lze z jiných vektorových formátů (ať už SVG či ESP) obrázky přenést snadno pomocí grafických programů, jako je třeba inkscape. \LaTeX si rozhodně poradí i s tradičními formáty PNG a JPG, avšak tyto obrázky mohou zabírat více prostoru a kolikrát
+\subsection{Obrázky}
+
+U obrázků je dobré používat vektorové formáty, pokud to jde. \LaTeX se nejvíc kamarádí s formátem PDF. Do známého PDFka lze z jiných vektorových formátů (ať už SVG či ESP) obrázky přenést snadno pomocí grafických programů, jako je třeba Inkscape. \LaTeX si rozhodně poradí i s tradičními formáty PNG a JPG, avšak tyto obrázky mohou zabírat více prostoru a při tisku se může projevit nižší rozlišení obrázků. Pokud chceš používat tyto obrázky, rozhodně měj na paměti, aby měli rozlišení alespoň 250 indálně 330 ppi.
+
+Obrázky se vkládají do prostředí \texttt{figure}, při úpravě šířky je možné krom tradičních jednotek jako cm nebo mm použít také jako jednotku šířku stránky \verb|\textwidth| to se hodí zejména když chceš mít více podobrázků. 
+
+U každého obrázku je důležité aby měl popisek, \texttt{caption}. Do popisku napiš, co na obrázku je, případně nějaký další popis, tak aby čtenář následně neměl sebemenší pochybnost. U obrázků co nejsou tvoje nezapomeň an citaci. Jinak by to totiž znamenalo, že jsi obrázek dělal ty sám, což není etické přivlastňovat si cizí díla. Popisek obrázku je věta, proto musí vždy končit tečkou.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{imgs/soc-logo.jpg}
-    \caption{Logo SOČky}
+    \caption{Logo SOČky \cite{socLogo}.}
     \label{fig:logoSOC}
 \end{figure}
 
+Když chceš odkazovat na obrázek, stačí pak už jen napsat příkaz \verb|\ref| a do závorek napsat označení \texttt{obrázku}. Třeba logo SOČky, můžeš vidět na obrázku \ref{fig:logoSOC} \cite{socLogo}.
+
+Pokud bys měl více podobrázků přichází do hry balíček \texttt{subcaption}. Pomocí něj lze vysázet i podobrázky. U podobrázků se popisek píše pouze jeden, dolů. Je v tomto připadě vhodné použít navíc hranaté závorky, do nichž se napíše kratší popisek, který se následně ukáže v seznamu obrázků.
+
+
+
+\begin{figure}[h] \centering
+    \begin{subfigure}{0.6\textwidth} %% šířka podobrázku
+      \includegraphics[width=\textwidth]{imgs/vysledek_10} 
+      \caption{}
+    \end{subfigure}
+    \begin{subfigure}{0.6\textwidth}
+      \includegraphics[width=\textwidth]{imgs/vysledek_20}
+      \caption{}
+    \end{subfigure}
+    \caption[Graf závislosti rotace DH PSF $\Delta\varphi$ na defokusaci objektivu $\Delta z$.]{Graf závislosti rotace DH PSF $\Delta\varphi$ na defokusaci objektivu $\Delta z$, (a) při použití objektivu Plan Fluor 10, (b) při použití objektivu Plan Fluor 20. Měřená data (žluté body) jsou lineárně proloženy (přerušovaná přímka). }
+    \label{fig:rotace_grafy}
+\end{figure}
+
+Všimni si, že obrázky jsou naschvál široké. Je to proto, aby byly dobře čitelné. 
+
+\subsection{Tabulky}
+
+U tabulek platí to stejné co u obrázků. Zarovnávají se na střed a nechávají se \uv{plavat} v textu. Tabulka narozdíl od textu, má popisek nahoře. U tabulky \ref{tab:ukazka} je použit balíček \texttt{booktabs}, pomocí kterého je celá tabulka naformátovaná.
+
+Seznam jak obrázků tak tabulek je pak vytvořen pomocí příkazů \texttt{listoftables} a~\texttt{listoffigures} na konci práce před literaturou.
+
 \begin{table}
     \caption{Tato tabulka slouží jako ukázka toho, jak mohou tabulky vypadat.}
-    \begin{center}
+    \label{tab:ukazka}
+    \centering
         \begin{tabular}{lll}
-            \toprule
+            \toprule %% příkazy z balíčku booktabs
             záhlaví& této & tabulky\\
             \midrule
             obsah&tabulky& už\\
             není & oddělený &čarami\\
             \bottomrule
         \end{tabular}
-    \end{center}
 \end{table}
+
+\subsection{Literatura}
+
+V \LaTeX{}u lze dělat seznam dvěma způsoby. V této šabloně jsem použil ten, kdy se seznam literatury píše přímo do práce. Pro jeho vygenerování doporučuji použít některý z generátarů, jako jsou například Citace PRO \cite{citacePRO}. Pomocí citací lze vygenerovat přímo dokument, který se pak už jen překopíruje do textu a člověk nemusí nic zvýrazňovat. Dále lze využít Bibtex, který rozhodně do budoucna hodlám zaimplementovat do šablony.
+
+Pokud bys chtěl odkazovat na vícero zdrojů stačí je napsat vedle sebe oddělené čárkou \cite{LaTeXprirucka, citacePRO, Born2019}. Případně můžu odkaz na konkrétní stránku dát do hranatých závorek, viz \cite[str.~1]{Born2019}
+
+Jinak si všimni popisku grafů. Ačkoli nejspíš netušíš co je to DH PSF či defokusace objektivu mělo by ti být jasné, že je důležité přesně graf popsat. To znamená co je na vodorovné ose, co je na svislé ose. V jakých jednotkách veličiny jsou. Které body co znamenají, která křivka má jaký význam. Napsat samotné \uv{$\Delta \varphi$} je málo, vždy raději připoměň, co daná značka znamená.
+
+\section[Pokročilejší tipy]{Nějaké pokročilejší tipy, které se mohou hodit}
+
+\subsection{Rovnice}
+
+Sazba matematiky je věda sama o sobě. Ačkoli Word prošel obrovskou změnou a je v~tomto mnohem lepší, tak \LaTeX je dělaný přímo pro sazbu matematiky (ještě jsem neviděl matematika, co by používal Word). Spolu s balíčky \texttt{amsmath} a \texttt{amsfonts} snad neexistuje nic, co by se používalo a \LaTeX by to nezvládl. Ať už jde o základní věci jako řecká písmenka -- $\alpha, \beta, \gamma, \dots$ -- integrály -- $\int_{l_i}^{l_f} \tau \dif l $ -- až třeba po speciální písmena -- $\mathscr{F}: \mathbb{R}^n \to \mathbb{R}^m$. Pro případ, že bys potřeboval nějaké speciální integrály, je tu balíček \texttt{esint}, pomocí něj můžeš napsat třeba
+$$ \oiint_{S(V)} \vec{E} \cdot \dif \vec{S} = \iiint_{V} \left(\vec{\nabla} \cdot \vec{E}\right) \dif V .$$
+
+Jak můžeš vidět tak rovnice lze psát jednak do textu a nebo pokud se jedná o nějakou důležitou nebo rozsáhlejší rovnici tak na samostatný řádek. Pokud je rovnice opravdu důležitá, tak je vhodné ji také číslovat. Pak se na ni můžeš dále odkazovat v textu.
+\begin{equation}
+    \vec{F} = m \vec{a}
+    \label{eq:newton2}
+\end{equation}
+\dots Například podle druhého Newtonova zákona, rovnice (\ref{eq:newton2}) \dots Zároveň je vždy nutné vysvětlit co která veličina znamená. V tomto případě bych napsal, že v druhém Newtonově zákoně vektor síly $\vec F$ odpovídá součinu hmotnosti tělesa $m$ a jeho zrychlení $\vec a$. 
+
+Věřím, že se sazbou matematiky ti pomůže tvůj školitel, případně mi můžeš napsat (mail je v úvodu). Jednotlivé funkcionality spolu se seznamem znaků nalezneš jednak v ne příliš stručném úvodu~\cite{LaTeXprirucka} nebo na Wikibooks v sekcích \emph{Mathematics} a \emph{Advanced mathematics}~\cite{wikibooksLaTeX}.
+
+\subsection{Výpisy kódu}
+
+Ačkoli můžeš využít příkazů \texttt{verb} či prostředí \texttt{verbatim} pro psaní textu tak jak je. Pro výpis zdrojových kódů je vhodnější použít balíčku \texttt{listings}, který umí kód zároveň také zvyrazňovat, či načítat bez nutnosti ho vpisovat.
+
+Konkrétní nastavení nalezneš výše ve zrojovém kódu této šablony.
+
+\lstinputlisting[language=TeX, firstline=73, lastline=90, caption={Kód nastavení výpisu.}]{prace.tex}
+
+\lstinputlisting[firstline=3, lastline=7]{code/example.py}
 
 \subsection{Some even more specific section maybe with even longer and longer name}
 \lipsum[1-2]
@@ -234,7 +362,6 @@ U obrázků je dobré používat vektorové formáty, pokud to jde. \LaTeX se ne
     \oint B \cdot d \vec{s} = \upmu_0 I
 \end{equation}
 
-\lstinputlisting[firstline=3, lastline=7]{code/example.py}
 
 \lipsum[1-3]
 
@@ -256,8 +383,11 @@ Co dále udělat
     \bibitem{sablonaSOC} DOKULIL Jakub. \textit{Šablona pro psaní SOČ v programu \LaTeX} [Online]. Brno, 2020 [cit. 2020-08-24]. Dostupné z: \url{https://github.com/Kubiczek36/SOC_sablona}
     \bibitem{LaTeXprirucka}OETIKER, Tobias, Hubert PARTL, Irene HYNA, Elisabeth SCHEGL, Michal KOČER a Pavel SÝKORA. \textit{Na příliš stručný úvod do systému LaTeX2e} [online]. 1998 [cit. 2020-08-24]. Dostupné z: \url{https://www.jaroska.cz/elearning/informatika/typografie/lshort2e-cz.pdf}
     \bibitem{wikibooksLaTeX}\textit{Wikibooks: LaTeX} [online]. San Francisco (CA): Wikimedia Foundation, 2001- [cit. 2020-08-24]. Dostupné z: \url{https://en.wikibooks.org/wiki/LaTeX}
-    \bibitem{Born2019}
-    BORN, Max a Emil WOLF. \textit{Principles of optics: electromagnetic theory of propagation, interference and diffraction of light}. 7th (expanded) edition. Reprinted wirth corrections 2002. 15th printing 2019. Cambridge: Cambridge University Press, 2019. ISBN 978-0-521-64222-4.
+    \bibitem{stackExchange} \textit{TeX - LaTeX Stack Exchange} [online]. Stack Exchange, 2020 [cit. 2020-09-01]. Dostupné z: \url{https://tex.stackexchange.com}
+    \bibitem{socLogo} \textit{Středoškolská odborná činnost} [online]. [cit. 2020-08-26]. Dostupné z: \url{https://www.soc.cz}
+    \bibitem{citacePRO}\textit{Citace PRO} [online]. Citace.com, 2020 [cit. 2020-08-31]. Dostupné z: \url{https://www.citacepro.com}
+
+    \bibitem{Born2019} BORN, Max a Emil WOLF. \textit{Principles of optics: electromagnetic theory of propagation, interference and diffraction of light}. 7th (expanded) edition. Reprinted wirth corrections 2002. 15th printing 2019. Cambridge: Cambridge University Press, 2019. ISBN 978-0-521-64222-4.
 \end{thebibliography}
 
 %% obrázky 
