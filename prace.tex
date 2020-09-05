@@ -12,8 +12,8 @@
 %% Nutné balíčky a nastavení
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Moc důležitý a zajímavý název v češtině} %% -- Název tvé práce
-\author{Dummy Author} %% -- tvé jméno
+\title{Pojednání o vražedném Santovi} %% -- Název tvé práce
+\author{Philip J. Fry} %% -- tvé jméno
 \date{3020} %% -- rok, kdy píšeš SOČku
 
 \usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=1.5cm]{geometry} %% nastaví okraje, left -- vnitřní okraj, right -- vnější okraj
@@ -27,7 +27,7 @@
 
 \usepackage{subcaption} %% balíček pro vkládání podobrázků
 
-\usepackage{hyperref}
+\usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
 
 \linespread{1.15} %% řádkování
 
@@ -49,8 +49,7 @@
 %% Balíčky co se můžou hodit :) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů, balíček je nutný pokud chcete 
-
+\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů, 
 
 \usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, například u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
 
@@ -64,66 +63,10 @@
 %% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem 
 %% kratší a mohu si tak usnadnit práci
 
-\usepackage{listings} %% balíček pro sazbu zdrojových kódů
-
-\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
-\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
-\definecolor{mylilas}{RGB}{170,55,241}
-
-\lstset{language=Python, %% sem napiš jaký programovací jazyk používáš,
-% úplný seznam viz: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
-% převzato a upraveno z https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
-    %basicstyle=\color{red},
-    breaklines=true,%
-    basicstyle=\ttfamily,
-    keywordstyle=\color{blue},%
-    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
-    identifierstyle=\color{black},%
-    stringstyle=\color{mylilas},
-    commentstyle=\color{mygreen},%
-    showstringspaces=false,% without this there will be a symbol in the places where there is a space
-    numbers=left,%
-    numberstyle={\tiny \color{black}},% size of the numbers
-    numbersep=9pt, % this defines how far the numbers are from the text
-    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
-    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
-    literate=%  definice symbolů s diakritikou
-    {á}{{\'a}}1
-    {č}{{\v{c}}}1
-    {ď}{{\v{d}}}1
-    {é}{{\'e}}1
-    {ě}{{\v{e}}}1
-    {í}{{\'i}}1
-    {ň}{{\v{n}}}1
-    {ó}{{\'o}}1
-    {ř}{{\v{r}}}1
-    {š}{{\v{s}}}1
-    {ť}{{\v{t}}}1
-    {ú}{{\'u}}1
-    {ů}{{\r{u}}}1
-    {ý}{{\'y}}1
-    {ž}{{\v{z}}}1
-    {Á}{{\'A}}1
-    {Č}{{\v{C}}}1
-    {Ď}{{\v{D}}}1
-    {É}{{\'E}}1
-    {Ě}{{\v{E}}}1
-    {Í}{{\'I}}1
-    {Ň}{{\v{N}}}1
-    {Ó}{{\'O}}1
-    {Ř}{{\v{R}}}1
-    {Š}{{\v{S}}}1
-    {Ť}{{\v{T}}}1
-    {Ú}{{\'U}}1
-    {Ů}{{\r{U}}}1
-    {Ý}{{\'Y}}1
-    {Ž}{{\v{Z}}}1
-}
-
-%% Bordel pro práci - později se smázne :) 
+%% Bordel pro práci - můžeš smáznout :) 
 %%%%%%%%%%%%%%%%%%%
 
-\usepackage{lipsum}
+\usepackage{lipsum} %% balíček který píše lipsum (nesmyslný text, který se používá pro kontrolu typografie)
 
 %% Začátek dokumentu
 %%%%%%%%%%%%%%%%%%%%
@@ -241,7 +184,6 @@ Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné 
 
 \noindent Template, \LaTeX, High school proffessional activity, \dots 
 
-
 \cleardoublepage
 
 \tableofcontents
@@ -252,7 +194,7 @@ Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné 
 
 \chapter*{Úvod}
 Ahoj,
-a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX pro psaní své práce, jelikož jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku. Tvá práce pak bude vypadat, krásně, elegantně a profesionálně a tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). Zároveň je dobré sledovat komentáře v zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena, a nebo přímo na můj mail \url{kubadokulil99@gmail.com}
+a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX pro psaní své práce, jelikož jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku. Tvá práce pak bude vypadat, krásně, elegantně a profesionálně a tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). Rozhodně nevytvářej samostatný dokument, vymaž text co je v šabloně a nahraď jej tí tvým. Při psaní je dobré sledovat komentáře ve zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena, a nebo přímo na můj mail \url{kubadokulil99@gmail.com}
 
 Ale teď už hurá na psaní!
 
@@ -263,7 +205,7 @@ Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje p
 Pokud s \LaTeX em úplně zařínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}. Pokud narazíš na nějaký problém googlete. Na internetu je spoustu fór, kde pravděpodobně už někdo podobný problém řešil. Asi nejvíce otho najdeš na stránce TeX - LaTeX Stackexchange \cite{stackExchange}.
 
 
-\section[Základy]{Základy: Text, obrázky, tabulky a citace}
+\section[Základy]{Základy: Text, obrázky, tabulky a citace} %%[Text, který bude v obsahu]{Text, který se vytiskne na stránce} Zkus měnit jednotlivé závorky a uvidíš :) 
 Psaní textu v tomto není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Pokud často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~|~(tildy). Pokud budeš chtít psát uvozovky použij příkaz \texttt{uv}, pomocí něj se ti vytvoří uvozovky podle příslušného jazyka. V česku tedy ve formátu 99 66. Použití příkazu najdeš níže v textu.
 
 \subsection{Obrázky}
@@ -288,11 +230,11 @@ Pokud bys měl více podobrázků přichází do hry balíček \texttt{subcaptio
 
 
 \begin{figure}[h] \centering
-    \begin{subfigure}{0.6\textwidth} %% šířka podobrázku
+    \begin{subfigure}{0.63\textwidth} %% šířka podobrázku
       \includegraphics[width=\textwidth]{imgs/vysledek_10} 
       \caption{}
     \end{subfigure}
-    \begin{subfigure}{0.6\textwidth}
+    \begin{subfigure}{0.63\textwidth}
       \includegraphics[width=\textwidth]{imgs/vysledek_20}
       \caption{}
     \end{subfigure}
@@ -329,7 +271,7 @@ V \LaTeX{}u lze dělat seznam dvěma způsoby. V této šabloně jsem použil te
 Pokud bys chtěl odkazovat na vícero zdrojů stačí je napsat vedle sebe oddělené čárkou \cite{LaTeXprirucka, citacePRO, Born2019}. Případně můžu odkaz na konkrétní stránku dát do hranatých závorek, viz \cite[str.~1]{Born2019}
 
 
-\section[Pokročilejší tipy]{Nějaké pokročilejší tipy, které se mohou hodit}
+\section[Pokročilejší tipy]{Pokročilejší tipy, které se mohou hodit}
 
 \subsection{Rovnice}
 
@@ -345,37 +287,15 @@ Jak můžeš vidět tak rovnice lze psát jednak do textu a nebo pokud se jedná
 
 Věřím, že se sazbou matematiky ti pomůže tvůj školitel, případně mi můžeš napsat (mail je v úvodu). Jednotlivé funkcionality spolu se seznamem znaků nalezneš jednak v Ne příliš stručném úvodu~\cite{LaTeXprirucka} nebo na Wikibooks v sekcích \emph{Mathematics} a \emph{Advanced mathematics}~\cite{wikibooksLaTeX}.
 
-\subsection{Výpisy kódu}
+\chapter{Když dokončuji práci}
 
-Ačkoli můžeš využít příkazů \texttt{verb} či prostředí \texttt{verbatim} pro psaní textu tak jak je. Pro výpis zdrojových kódů je vhodnější použít balíčku \texttt{listings}, který umí kód zároveň také zvyrazňovat, či načítat bez nutnosti ho vpisovat.
+Každou práci je dobré zkontrolovat, aby v ní nebyly pravopisné chyby, nebyla těžkopádně napsaná -- byla čtivá -- a neobsahovala žádný typografický nedostatek. Proto, když práci sepíšeš nech ji chvilku odležet, třeba týden a pak si ji po sobě znovu přečti. Hned uvidíš, kolik věcí bys napsal jinak případně kde tě bije do očí jaká chyba. Dej práci přečíst také svému školiteli a případně češtináři. Zajistíš tak, že bude obsahovat méně chyb.
 
-Konkrétní nastavení nalezneš výše ve zrojovém kódu této šablony.
+Pak můžeš práci vytisknout a hurá do soutěže.
 
-\lstinputlisting[language=TeX, firstline=73, lastline=90, caption={Kód nastavení výpisu.}]{prace.tex}
+\chapter*{Závěr}
 
-\lstinputlisting[firstline=3, lastline=7]{code/example.py}
-
-\subsection{Some even more specific section maybe with even longer and longer name}
-\lipsum[1-2]
-\begin{equation}
-    \oint B \cdot d \vec{s} = \upmu_0 I
-\end{equation}
-
-
-\lipsum[1-3]
-
-\chapter[Třeba to ale nějak zkrátím]{A co když budu mít nějakou fakt moc dlouhou kapitolu -- teda název -- třeba i s rovnicí $E = mc^2$}
-
-Co dále udělat
-
-\begin{itemize}
-    \item přidat odkaz na ne příliš stručný úvod do systému \LaTeX2e
-    \item odkaz na wikibooks
-    \item tex overflow
-    \item obrázky, vektor - rastr
-    \item 
-\end{itemize}
-
+Věřím, že jsem ti spolu se šablonou poskytl několik tipů, jak napsat práci. Ať už jde o úplné začátky s \LaTeX{}em. Či ukázku toho, co vše s ním zvládneš. Pokud bys měl k šabloně libovolné dotazy, rouhodně se na mě obrať. \LaTeX tvé práci dodá určitou krásu, tak doufám, že ti dodá sebevědomí a uspěješ při souteži. A i kdyby ne vzpomeň si, kolik ses toho musel naučit a hned uvidíš o jaký kus ses posunul.
 
 %% literatura
 \begin{thebibliography}{99}
@@ -396,12 +316,11 @@ Co dále udělat
 
 \appendix %% začínají přílohy
 
-\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{Příloha \thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}] %% nastavení nadpisu
+\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{Příloha \thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}] %% nastavení nadpisu u příloh
 
 
 \chapter{%Příloha A 
 Spot diagramy a další }
 
-\lstinputlisting{code/example.py}
 
 \end{document}
