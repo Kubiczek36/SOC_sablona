@@ -194,45 +194,48 @@ Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné 
 
 \chapter*{Úvod}
 Ahoj,
-a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX pro psaní své práce, jelikož jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku. Tvá práce pak bude vypadat, krásně, elegantně a profesionálně a tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). Rozhodně nevytvářej samostatný dokument, vymaž text co je v šabloně a nahraď jej tí tvým. Při psaní je dobré sledovat komentáře ve zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena, a nebo přímo na můj mail \url{kubadokulil99@gmail.com}
+a vítám tě u této šablony pro psaní SOČky v \LaTeX u. Moc mne těší, že sis vybral právě typografický systém \LaTeX{ } pro psaní své práce. Jsem přesvědčen, že s jeho pomocí dosáhneš nejlepšího výsledku a tvá práce pak bude vypadat, krásně, elegantně a profesionálně. Zároveň tím snáz uděláš dobrý dojem na porotu. Pokud se s \LaTeX em teprve učíš, tak nevěš hlavu, i na tebe jsem myslel. V následujících kapitolách této šablony najdeš tipy a triky, jak psát práci a jak vytáhnout z \LaTeX u to nejlepší (a že toho umí). 
+
+Při samotném psaná rozhodně nevytvářej samostatný dokument, vymaž text co je v šabloně a nahraď jej tí tvým. Při psaní je dobré sledovat komentáře ve zdrojovém kódu, díky nim snáz pochopíš, k čemu je jaký příkaz. V případě kdyby něco nesedělo, nebo si na mě měl jakýkoli dotaz, tak se na mě můžeš jednak obrátit na GitHubu \cite{sablonaSOC}, kde je tato šablona uložena, a nebo přímo na můj mail \url{kubadokulil99@gmail.com} %% příkaz url pro sazbu odkazů
 
 Ale teď už hurá na psaní!
 
 \chapter{Tipy k psaní}
 
-Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje psát velmi rozsáhlé text. Jeho autor Donald Knuth ho stvořil, aby mohl vydat jeho učebnici \emph{The Art of Computer Programming} a dodnes se je využíván pro sazbu vysokoškolských skript a učebnic. V této kapitole najdeš ukázky různých funkcí a balíčků \LaTeX u od těch nejzákladnějších až po složitější. Neznamená to nutně, že všechny musíš použít, ale když potřebuješ pomoct, tak je dobré mít oporu. 
+Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje psát velmi rozsáhlé text. Jeho autor Donald Knuth ho stvořil, aby mohl vydat jeho učebnici \emph{The Art of Computer Programming} a dodnes se je využíván pro sazbu skript, učebnic, článků či závěrečných prací. V této kapitole najdeš ukázky různých funkcí a balíčků \LaTeX u od těch nejzákladnějších až po složitější. Neznamená to nutně, že všechny musíš použít, ale když potřebuješ pomoct, tak je dobré mít oporu. 
 
-Pokud s \LaTeX em úplně zařínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}. Pokud narazíš na nějaký problém googlete. Na internetu je spoustu fór, kde pravděpodobně už někdo podobný problém řešil. Asi nejvíce otho najdeš na stránce TeX - LaTeX Stackexchange \cite{stackExchange}.
+Pokud s \LaTeX em úplně začínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}. Pokud narazíš na nějaký problém googli. Na internetu je spoustu fór, kde pravděpodobně už někdo podobný problém řešil. Asi nejvíce otho najdeš na stránce \emph{TeX - LaTeX Stackexchange} \cite{stackExchange}.
 
 
 \section[Základy]{Základy: Text, obrázky, tabulky a citace} %%[Text, který bude v obsahu]{Text, který se vytiskne na stránce} Zkus měnit jednotlivé závorky a uvidíš :) 
-Psaní textu v tomto není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Pokud často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~|~(tildy). Pokud budeš chtít psát uvozovky použij příkaz \texttt{uv}, pomocí něj se ti vytvoří uvozovky podle příslušného jazyka. V česku tedy ve formátu 99 66. Použití příkazu najdeš níže v textu.
+Psaní v \LaTeX{u} není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~|~(tildy). Pokud budeš chtít psát uvozovky použij příkaz \texttt{uv}, pomocí něj se ti vytvoří uvozovky podle příslušného jazyka. V česku tedy ve formátu 99 66. Použití příkazu najdeš níže v textu.
+
+Občas je zapotřebí \LaTeX{u} pomoct při rozdělování slov. To se udělá snadno vložením symbolů \verb|\-| mezi jednotlivé slabiky.
 
 \subsection{Obrázky}
 
 U obrázků je dobré používat vektorové formáty, pokud to jde. \LaTeX se nejvíc kamarádí s formátem PDF. Do známého PDFka lze z jiných vektorových formátů (ať už SVG či ESP) obrázky přenést snadno pomocí grafických programů, jako je třeba Inkscape. \LaTeX si rozhodně poradí i s tradičními formáty PNG a JPG, avšak tyto obrázky mohou zabírat více prostoru a při tisku se může projevit nižší rozlišení obrázků. Pokud chceš používat tyto obrázky, rozhodně měj na paměti, aby měli rozlišení alespoň 250 indálně 330 ppi.
 
-Obrázky se vkládají do prostředí \texttt{figure}, při úpravě šířky je možné krom tradičních jednotek jako cm nebo mm použít také jako jednotku šířku stránky \verb|\textwidth| to se hodí zejména když chceš mít více podobrázků. 
+Obrázky se vkládají do prostředí \texttt{figure}, při úpravě šířky je možné krom tradičních jednotek jako cm nebo mm použít také jako jednotku šířku stránky \texttt{textwidth} to se hodí zejména když chceš mít více podobrázků. 
 
 U každého obrázku je důležité aby měl popisek, \texttt{caption}. Do popisku napiš, co na obrázku je, případně nějaký další popis, tak aby čtenář následně neměl sebemenší pochybnost. U obrázků co nejsou tvoje nezapomeň an citaci. Jinak by to totiž znamenalo, že jsi obrázek dělal ty sám, což není etické přivlastňovat si cizí díla. Popisek obrázku je věta, proto musí vždy končit tečkou.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{imgs/soc-logo.jpg}
-    \caption{Logo SOČky \cite{socLogo}.}
-    \label{fig:logoSOC}
+\begin{figure}
+    \centering %% příkaz, který ti obrázek zarovná na střed
+    \includegraphics[width=0.6\textwidth]{imgs/soc-logo.jpg} %% vložení samotného obrátku
+    \caption{Logo SOČky \cite{socLogo}.} %% popisek obrázku, nezapomeň na citace!
+    \label{fig:logoSOC} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
-Když chceš odkazovat na obrázek, stačí pak už jen napsat příkaz \verb|\ref| a do závorek napsat označení \texttt{obrázku}. Třeba logo SOČky, můžeš vidět na obrázku \ref{fig:logoSOC} \cite{socLogo}.
+Když chceš odkazovat na obrázek, stačí pak už jen napsat příkaz \texttt{ref} a do závorek napsat označení obrázku. Třeba logo SOČky, můžeš vidět na obrázku \ref{fig:logoSOC} \cite{socLogo}.
 
 Pokud bys měl více podobrázků přichází do hry balíček \texttt{subcaption}. Pomocí něj lze vysázet i podobrázky. U podobrázků se popisek píše pouze jeden, dolů. Je v tomto připadě vhodné použít navíc hranaté závorky, do nichž se napíše kratší popisek, který se následně ukáže v seznamu obrázků.
 
 
-
 \begin{figure}[h] \centering
-    \begin{subfigure}{0.63\textwidth} %% šířka podobrázku
+    \begin{subfigure}{0.63\textwidth} %%prostředí pro podobrázek {šířka podobrázku}
       \includegraphics[width=\textwidth]{imgs/vysledek_10} 
-      \caption{}
+      \caption{} %% aby se ti vysázelo označení obrázku.
     \end{subfigure}
     \begin{subfigure}{0.63\textwidth}
       \includegraphics[width=\textwidth]{imgs/vysledek_20}
@@ -248,11 +251,11 @@ Všimni si, že obrázky jsou naschvál široké. Je to proto, aby byly dobře �
 
 U tabulek platí to stejné co u obrázků. Zarovnávají se na střed a nechávají se \uv{plavat} v textu. Tabulka narozdíl od textu, má popisek nahoře. U tabulky \ref{tab:ukazka} je použit balíček \texttt{booktabs}, pomocí kterého je celá tabulka naformátovaná.
 
-Seznam jak obrázků tak tabulek je pak vytvořen pomocí příkazů \texttt{listoftables} a~\texttt{listoffigures} na konci práce před literaturou.
+Seznam jak obrázků tak tabulek je pak vytvořen pomocí příkazů \texttt{listoftables} a~\texttt{list\-of\-fig\-ures} na konci práce před literaturou.
 
-\begin{table}
-    \caption{Tato tabulka slouží jako ukázka toho, jak mohou tabulky vypadat.}
-    \label{tab:ukazka}
+\begin{table}[b]
+    \caption{Tato tabulka slouží jako ukázka toho, jak mohou tabulky vypadat.} %% popisek se u tebaluky píše nad ní
+    \label{tab:ukazka} %% označení pro pozdější odkazování se 
     \centering
         \begin{tabular}{lll}
             \toprule %% příkazy z balíčku booktabs
@@ -266,7 +269,7 @@ Seznam jak obrázků tak tabulek je pak vytvořen pomocí příkazů \texttt{lis
 
 \subsection{Literatura}
 
-V \LaTeX{}u lze dělat seznam dvěma způsoby. V této šabloně jsem použil ten, kdy se seznam literatury píše přímo do práce. Pro jeho vygenerování doporučuji použít některý z generátarů, jako jsou například Citace PRO \cite{citacePRO}. Pomocí citací lze vygenerovat přímo dokument, který se pak už jen překopíruje do textu a člověk nemusí nic zvýrazňovat. Dále lze využít Bibtex, který rozhodně do budoucna hodlám zaimplementovat do šablony.
+V \LaTeX{}u lze dělat seznam literatury dvěma způsoby. V této šabloně jsem použil ten, kdy se seznam literatury píše přímo do práce. Pro jeho vygenerování doporučuji použít některý z generátarů, jako jsou například Citace PRO \cite{citacePRO}. Pomocí citací lze vygenerovat přímo dokument, který se pak už jen překopíruje do textu a člověk nemusí nic zvýrazňovat. Dále lze využít Bibtex, který rozhodně do budoucna hodlám zaimplementovat do šablony, avšak jeho použití nemusí být tak přátelské k začátečníkům.
 
 Pokud bys chtěl odkazovat na vícero zdrojů stačí je napsat vedle sebe oddělené čárkou \cite{LaTeXprirucka, citacePRO, Born2019}. Případně můžu odkaz na konkrétní stránku dát do hranatých závorek, viz \cite[str.~1]{Born2019}
 
@@ -275,7 +278,7 @@ Pokud bys chtěl odkazovat na vícero zdrojů stačí je napsat vedle sebe oddě
 
 \subsection{Rovnice}
 
-Sazba matematiky je věda sama o sobě. Ačkoli Word prošel obrovskou změnou a je v~tomto mnohem lepší, tak \LaTeX je dělaný přímo pro sazbu matematiky (ještě jsem neviděl matematika, co by používal Word). Spolu s balíčky \texttt{amsmath} a \texttt{amsfonts} snad neexistuje nic, co by se používalo a \LaTeX by to nezvládl. Ať už jde o základní věci jako řecká písmenka -- $\alpha, \beta, \gamma, \dots$ -- integrály -- $\int_{l_i}^{l_f} \tau \dif l $ -- až třeba po speciální písmena -- $\mathscr{F}: \mathbb{R}^n \to \mathbb{R}^m$. Pro případ, že bys potřeboval nějaké speciální integrály, je tu balíček \texttt{esint}, pomocí něj můžeš napsat třeba
+Sazba matematiky je věda sama o sobě. Ačkoli Word prošel obrovskou změnou a je v~tomto mnohem lepší, tak \LaTeX je pro to přímo (ještě jsem neviděl matematika, co by používal Word). Spolu s balíčky \texttt{amsmath} a \texttt{amsfonts} snad neexistuje nic, co by se používalo a \LaTeX by to nezvládl. Ať už jde o základní věci jako řecká písmenka -- $\alpha, \beta, \gamma, \dots$ -- integrály -- $\int_{l_i}^{l_f} \tau \dif l $ -- až třeba po speciální písmena -- $\mathscr{F}: \mathbb{R}^n \to \mathbb{R}^m$. Pro případ, že bys potřeboval nějaké speciální integrály, je tu balíček \texttt{esint}, pomocí něj můžeš napsat třeba
 $$ \oiint_{S(V)} \vec{E} \cdot \dif \vec{S} = \iiint_{V} \left(\vec{\nabla} \cdot \vec{E}\right) \dif V .$$
 
 Jak můžeš vidět tak rovnice lze psát jednak do textu a nebo pokud se jedná o nějakou důležitou nebo rozsáhlejší rovnici tak na samostatný řádek. Pokud je rovnice opravdu důležitá, tak je vhodné ji také číslovat. Pak se na ni můžeš dále odkazovat v textu.
@@ -289,7 +292,7 @@ Věřím, že se sazbou matematiky ti pomůže tvůj školitel, případně mi m
 
 \chapter{Když dokončuji práci}
 
-Každou práci je dobré zkontrolovat, aby v ní nebyly pravopisné chyby, nebyla těžkopádně napsaná -- byla čtivá -- a neobsahovala žádný typografický nedostatek. Proto, když práci sepíšeš nech ji chvilku odležet, třeba týden a pak si ji po sobě znovu přečti. Hned uvidíš, kolik věcí bys napsal jinak případně kde tě bije do očí jaká chyba. Dej práci přečíst také svému školiteli a případně češtináři. Zajistíš tak, že bude obsahovat méně chyb.
+Každou práci je dobré zkontrolovat, aby v ní nebyly pravopisné chyby, nebyla těžkopádně napsaná -- byla čtivá -- a neobsahovala žádný typografický nedostatek. Proto, když práci sepíšeš, nech ji chvilku odležet, třeba týden. Pak si ji po sobě znovu přečti. Hned uvidíš, kolik věcí bys napsal jinak případně kde tě bije do očí jaká chyba. Dej práci přečíst také svému školiteli a případně češtináři. Zajistíš tak, že bude obsahovat méně chyb.
 
 Pak můžeš práci vytisknout a hurá do soutěže.
 
