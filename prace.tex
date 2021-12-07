@@ -12,9 +12,19 @@
 %% Nutné balíčky a nastavení
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Pojednání o vražedném Santovi} %% -- Název tvé práce
-\author{Philip J. Fry} %% -- tvé jméno
-\date{3020} %% -- rok, kdy píšeš SOČku
+%% Proměnné
+\newcommand\city{Nový New York} %% vyplň oficiální název města
+\newcommand\district{Galaktický kraj} %% vyplň oficiální název kraje
+\newcommand\specialization{Obor č. 21: Futuramologie} %% -- napiš číslo a název tvého oboru
+\newcommand\school{Mars University} %% vyplň název školy
+\newcommand\consultant{prof. Hubert J. Farnsworth} %% vyplň jméno svého konzultanta
+\newcommand\authorName{Philip J. Fry}  %% vyplň své jméno
+\newcommand\publicationYear{3020} %% vyplň rok
+\newcommand\mainTitle{Pojednání o vražedném Santovi} %% vyplň název své práce
+
+\title{\mainTitle} %% -- Název tvé práce
+\author{\authorName} %% -- tvé jméno
+\date{\publicationYear} %% -- rok, kdy píšeš SOČku
 
 \usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=1.5cm]{geometry} %% nastaví okraje, left -- vnitřní okraj, right -- vnější okraj
 
@@ -82,21 +92,21 @@
 
             \vspace{14pt}
             \large{ %%%%
-                Obor č. 21: Futuramologie %% -- napiš číslo a název tvého oboru
+                \specialization
             } %%%%
 
             \vspace{0.4 \textheight}
 
             \LARGE{ %%%%
-                Pojednání o vražedném Santovi
+                \mainTitle
             }%%%%
 
             \vspace{0.4\textheight}
         \end{center}
         
-        \noindent\Large{Philip J. Fry}  %% vyplň své jméno
+        \noindent\Large{\authorName} 
 
-        \noindent\Large{Galaktický kraj \hspace{\stretch{1}}  Nový New York, 3020} %% vyplň oficiální název kraje, město a rok
+        \noindent\Large{\district \hspace{\stretch{1}}  \city, \publicationYear} 
         
             
     } %%%
@@ -111,13 +121,13 @@
 
         \vspace{14pt}
         {\large %%%%
-            Obor č. 21: Futuramologie %% -- napiš číslo a název tvého oboru
+            \specialization %% -- napiš číslo a název tvého oboru
         } %%%%
 
         \vspace{0.3 \textheight}
 
         \LARGE{ %%%%
-        Pojednání o vražedném Santovi
+        \mainTitle
         }
 
         \LARGE{ %%%%
@@ -128,13 +138,13 @@
     \end{center}  
 }%%%
 {\Large %%%
-    \noindent\textbf{Jméno:} Philip J. Fry\\
-    \textbf{Škola:} Mars University\\
-    \textbf{Kraj:} Galaktický kraj\\
-    \textbf{Konzultant:} prof. Hubert J. Farnsworth\\
+    \noindent\textbf{Jméno:} \authorName\\
+    \textbf{Škola:} \school\\
+    \textbf{Kraj:} \district\\
+    \textbf{Konzultant:} \consultant\\
 } %%%
 
-\noindent Nový New York, 3020
+\noindent \city, \publicationYear
 
 \cleardoublepage
 
@@ -150,7 +160,7 @@
 
 \noindent V Novém New Yorku dne 9. září 3020 \dotfill{}\hspace{\stretch{0.5}} 
 
-\hspace{8cm} Philip J. Fry
+\hspace{8cm} \authorName
 
 \cleardoublepage
 
@@ -158,7 +168,7 @@
 \noindent{\Large{\bfseries{Poděkování}}}
 
 \noindent
-Chtěl bych poděkovat mému školiteli, prof. Farnsworthovi, za jeho úžasné tipy, triky a připomínky, bez kterých by nevznikla tato práce. Dále bych chtěl poděkovat mé rodině a přítelkyni, za to, že mě dostatečně zásobili kávou.
+Chtěl bych poděkovat mému školiteli, \consultant, za jeho úžasné tipy, triky a připomínky, bez kterých by nevznikla tato práce. Dále bych chtěl poděkovat mé rodině a přítelkyni, za to, že mě dostatečně zásobili kávou.
 
 \cleardoublepage
 
