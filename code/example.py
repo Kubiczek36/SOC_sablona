@@ -1,7 +1,9 @@
 import numpy as np
 
+
 def s(t):
-    return(1/2*9.81*t**2)
+    return (1 / 2 * 9.81 * t ** 2)
+
 
 t = np.linspace(0, 10, 1000)
 s = s(t)
